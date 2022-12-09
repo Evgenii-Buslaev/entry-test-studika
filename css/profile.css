@@ -1,0 +1,13 @@
+.profile {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 26px;
+  padding: 5px 10px;
+}
+
+.profile:hover {
+  background-color: #f1f1f1;
+}

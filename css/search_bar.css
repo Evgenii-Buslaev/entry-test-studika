@@ -1,0 +1,32 @@
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 14px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 592px;
+  height: 48px;
+  background-color: #f1f1f1;
+  border-radius: 100px;
+}
+
+.search-bar input {
+  width: 88%;
+  margin-right: 1rem;
+}
+
+.search-bar input::placeholder {
+  text-align: center;
+}
+
+.search-bar img {
+  width: 20px;
+  color: gray;
+  margin-left: 1rem;
+}
