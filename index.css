@@ -8,6 +8,7 @@
 @import "./css//mobile-header.css";
 @import "./css/mobile-menu.css";
 @import "./css/city-list.css";
+@import "./css/preloader.css";
 
 * {
   margin: 0;
