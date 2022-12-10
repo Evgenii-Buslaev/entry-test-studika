@@ -4,7 +4,7 @@ const chooseCityMob = document.querySelector(".city");
 const cityWindow = document.querySelector(".city-list");
 
 const toggleCityWindow = () => {
-  let openned = true;
+  let openned = false;
   return () => {
     if (openned) {
       cityWindow.style.opacity = "0";

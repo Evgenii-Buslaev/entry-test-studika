@@ -1,5 +1,6 @@
 import { menuBtn, closeBtn, toggler } from "./scripts/toggleMenu.js";
 import { citiesFetching } from "./scripts/get-cities.js";
+import { render } from "./scripts/renderCities.js";
 
 import {
   chooseCityBtn,
@@ -13,4 +14,7 @@ closeBtn.addEventListener("click", toggler);
 chooseCityBtn.addEventListener("click", cityToggler);
 chooseCityMob.addEventListener("click", cityToggler);
 
-/* const cities = citiesFetching(); */
+chooseCityBtn.addEventListener("click", () => render());
+chooseCityMob.addEventListener("click", () => render());
+
+const cities = citiesFetching();
