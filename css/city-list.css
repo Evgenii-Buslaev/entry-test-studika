@@ -1,0 +1,82 @@
+.city-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 384px;
+  height: auto;
+  background: #fbfbfb;
+  border-radius: 10px;
+  box-shadow: 0px 7px 38px rgba(44, 62, 106, 0.25);
+}
+
+.city-list input {
+  padding-left: 20px;
+  width: 332px;
+  height: 48px;
+  font-size: 14px;
+  color: #a7a7a7;
+  border: 2px solid #abc8ea;
+  border-radius: 100px;
+}
+
+/* .city-list button:hover {
+  background-color: #0656b4;
+  opacity: 0.9;
+  color: #ffffff;
+}
+ */
+
+#added-cities {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  border-bottom: solid #d8d8d8 thin;
+}
+
+.added-item {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 10px 15px;
+  height: 22px;
+  width: auto;
+  border-radius: 100px;
+  border: solid #d8d8d8 thin;
+}
+
+#city-datalist {
+  margin: 10px 0;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.datalist-item {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  width: 100%;
+  text-align: start;
+  cursor: pointer;
+}
+
+.datalist-item:hover {
+  background-color: #f1f1f1;
+}
+
+.city-list button {
+  width: 100%;
+  height: 85px;
+  border-top: solid #d8d8d8 thin;
+  font-size: 14px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
