@@ -18,3 +18,9 @@ a {
 a:hover {
   background-color: #f1f1f1;
 }
+
+@media (max-width: 1250px) {
+  .navigation-bar {
+    width: 90%;
+  }
+}

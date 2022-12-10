@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.mob-header {
+  visibility: hidden;
+}
+
 .header-content {
   margin: 0.5rem auto;
   width: 80%;
@@ -53,4 +57,20 @@ button {
   width: 14px;
   margin-top: 5px;
   margin-right: 1px;
+}
+
+@media (max-width: 1250px) {
+  .header-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .header {
+    display: none;
+  }
+
+  .mob-header {
+    visibility: visible;
+  }
 }

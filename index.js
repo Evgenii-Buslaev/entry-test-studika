@@ -13,4 +13,4 @@ const citiesFetching = async () => {
   return cities;
 };
 
-const cities = citiesFetching();
+/* const cities = citiesFetching(); */

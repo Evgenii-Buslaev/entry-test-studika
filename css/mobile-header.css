@@ -1,0 +1,20 @@
+.mob-header {
+  width: 100vw;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.menu {
+  margin-left: 14px;
+  width: 20px;
+  transition-property: opacity;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.menu:hover {
+  opacity: 0.7;
+}

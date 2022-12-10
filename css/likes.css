@@ -12,3 +12,9 @@
 .likes:hover {
   background-color: #f1f1f1;
 }
+
+@media (max-width: 1150px) {
+  .likes {
+    margin-right: 4px;
+  }
+}

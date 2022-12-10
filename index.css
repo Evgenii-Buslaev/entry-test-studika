@@ -5,6 +5,7 @@
 @import "./css//profile.css";
 @import "./css/nav.css";
 
+@import "./css//mobile-header.css";
 * {
   margin: 0;
   font-family: "Open Sans", sans-serif;
