@@ -17,7 +17,11 @@
           <img src="./assets/vector.png" class="logo" alt="logo" />
           <div class="point-cont">
             <button class="point-me">
-              <img src="./assets/navigation.png" alt="navigate" />
+              <img
+                class="nav-image"
+                src="./assets/navigation.png"
+                alt="navigate"
+              />
             </button>
             <p class="cityname">Москва</p>
           </div>
@@ -68,7 +72,8 @@
         <div id="likes_counter">1</div>
       </div>
     </header>
-    <!--     <section class="mobile-menu">
+    <section class="mobile-menu">
+      <img src="./assets/close.png" class="close" alt="close menu" />
       <div class="profile">
         <div class="profile-name">Екатерина</div>
         <div class="avatar">
@@ -77,10 +82,19 @@
       </div>
       <div class="city">
         <div class="text">
-          <label>Город или регион</label>
-          <input type="text" value="Любой регион" />
+          <div class="text-input">
+            <label>Город или регион</label>
+            <input id="chosen-city" type="text" value="Любой регион" />
+          </div>
+          <button class="point-me">
+            <img
+              src="./assets/navigation.png"
+              alt="navigate"
+              class="nav-image"
+            />
+          </button>
         </div>
       </div>
-    </section> -->
+    </section>
   </body>
 </html>

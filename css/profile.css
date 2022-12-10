@@ -11,3 +11,9 @@
 .profile:hover {
   background-color: #f1f1f1;
 }
+
+@media (max-width: 1150px) {
+  .profile {
+    margin: 10px 0;
+  }
+}

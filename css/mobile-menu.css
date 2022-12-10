@@ -1,0 +1,45 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  height: 100vh;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ffffff;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  left: 315px;
+  width: 15px;
+  filter: invert();
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text-input {
+  width: 80%;
+}
+
+label {
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.city {
+  width: 80%;
+  border: solid #a7a7a7 thin;
+  border-radius: 5px;
+  padding: 10px;
+}

@@ -6,11 +6,14 @@
 @import "./css/nav.css";
 
 @import "./css//mobile-header.css";
+@import "./css/mobile-menu.css";
+
 * {
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #3a3a3a;
+  /* background-color: #f1f1f1; */
 }
