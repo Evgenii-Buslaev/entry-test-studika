@@ -1,7 +1,7 @@
 .mobile-menu {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -315px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,6 +11,8 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #ffffff;
+  transition-property: left;
+  transition-duration: 0.5s;
 }
 
 .close {

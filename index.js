@@ -1,16 +1,10 @@
-const API_URL = "https://studika.ru/api/areas";
-const options = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json;charset=utf-8",
-  },
-};
+import { menuBtn, closeBtn, toggler } from "./scripts/dynamic-styles.js";
+import { citiesFetching } from "./scripts/get-cities.js";
 
-const citiesFetching = async () => {
-  const response = await fetch(API_URL, options);
-  const cities = await response.json();
-  console.log(cities);
-  return cities;
-};
+console.log(toggler);
+console.log(menuBtn);
+
+menuBtn.addEventListener("click", toggler);
+closeBtn.addEventListener("click", toggler);
 
 /* const cities = citiesFetching(); */
