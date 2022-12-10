@@ -8,7 +8,7 @@ const toggleMenu = () => {
   let openned = false;
   return () => {
     if (openned) {
-      menu.style.left = "-315px";
+      menu.style.left = "-600px";
       body.style.backgroundColor = "#f1f1f1";
       header.style.display = "flex";
     } else {
