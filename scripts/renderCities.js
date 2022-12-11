@@ -11,7 +11,7 @@ const renderCities = () => {
     if (!regions) {
       regions = await citiesFetching();
       const cities = regions.map((elem) => elem.cities || []).flat();
-      const allCities = [...regions, ...cities];
+      const allCities = List.defineList([...regions, ...cities]);
 
       const renderAllCities = allCities.map((elem) => createCityItem(elem));
       renderAllCities.forEach((elem) => datalist.appendChild(elem));

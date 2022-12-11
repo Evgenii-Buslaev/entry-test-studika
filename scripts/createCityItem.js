@@ -6,7 +6,9 @@ const createCityItem = (data) => {
 
   item.classList.add("datalist-item");
   item.setAttribute("id", id);
+  titleItem.classList.add("datalist-item-name");
   titleItem.innerText = name;
+  titleItem.setAttribute("id", id);
   item.appendChild(titleItem);
 
   return item;

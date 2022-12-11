@@ -14,8 +14,16 @@ class List {
     return result;
   }
 
-  addItem(item) {
-    this.added.push(item);
+  addItem(id) {
+    const element = this.added.find((elem) => +elem.id === +id);
+    console.log(this.list);
+    console.log(element);
+    if (element) {
+      this.added = this.added.filter((elem) => +elem.id !== +id);
+    } else {
+      this.added.push(this.list.find((elem) => +elem.id === +id));
+    }
+    return this.added;
   }
 
   deleteItem(item) {
