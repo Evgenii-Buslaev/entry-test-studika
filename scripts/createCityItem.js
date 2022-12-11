@@ -1,10 +1,12 @@
-const createCityItem = (title) => {
-  if (!title) return;
+const createCityItem = (data) => {
+  const { name, id } = data;
+  if (!name) return;
   const item = document.createElement("div");
   const titleItem = document.createElement("p");
 
   item.classList.add("datalist-item");
-  titleItem.innerText = title;
+  item.setAttribute("id", id);
+  titleItem.innerText = name;
   item.appendChild(titleItem);
 
   return item;

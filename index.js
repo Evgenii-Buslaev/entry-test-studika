@@ -1,5 +1,5 @@
 import { menuBtn, closeBtn, toggler } from "./scripts/toggleMenu.js";
-import { citiesFetching } from "./scripts/get-cities.js";
+import { citiesFetching } from "./scripts/fetchCities.js";
 import { render } from "./scripts/renderCities.js";
 
 import {

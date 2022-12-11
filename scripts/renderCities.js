@@ -1,5 +1,5 @@
 import List from "./Classes/List.js";
-import { citiesFetching } from "./get-cities.js";
+import { citiesFetching } from "./fetchCities.js";
 import { createCityItem } from "./createCityItem.js";
 
 const datalist = document.getElementById("city-datalist");
@@ -10,14 +10,16 @@ const renderCities = () => {
   return async () => {
     if (!regions) {
       regions = await citiesFetching();
+      const cities = regions.map((elem) => elem.cities || []).flat();
+      const allCities = [...regions, ...cities];
 
-      const renderRegions = regions.map((elem) => createCityItem(elem.name));
-      renderRegions.forEach((elem) => datalist.appendChild(elem));
+      const renderAllCities = allCities.map((elem) => createCityItem(elem));
+      renderAllCities.forEach((elem) => datalist.appendChild(elem));
 
       datalist.style.display = "flex";
       preloader.style.display = "none";
     } else {
-      return cities;
+      return regions;
     }
   };
 };
