@@ -8,7 +8,11 @@ import {
   cityToggler,
 } from "./scripts/toggleCities.js";
 
-import { choosingContainer, chooseCity } from "./scripts/chooseCity.js";
+import {
+  choosingContainer,
+  addedContainer,
+  chooseCity,
+} from "./scripts/chooseCity.js";
 
 menuBtn.addEventListener("click", toggler);
 closeBtn.addEventListener("click", toggler);
@@ -24,9 +28,16 @@ choosingContainer.addEventListener("click", (e) => {
   if (
     e.target.className === "datalist-item" ||
     e.target.className === "datalist-item-name" ||
-    e.target.className === "added-item"
+    e.target.className === "added-item" ||
+    e.target.className === "added-item-text"
   ) {
     chooseCity(e.target.id);
+  }
+});
+
+addedContainer.addEventListener("click", (e) => {
+  if (e.target.className === "added-delete") {
+    chooseCity(e.target.parentNode.id);
   }
 });
 
