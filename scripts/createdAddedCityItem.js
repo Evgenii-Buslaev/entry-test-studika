@@ -13,6 +13,7 @@ const createAddedCityItem = (data) => {
   text.innerText = name;
 
   close.setAttribute("src", "../assets/close.png");
+  close.setAttribute("alt", "Удалить город");
   close.classList.add("added-delete");
 
   item.appendChild(text);
