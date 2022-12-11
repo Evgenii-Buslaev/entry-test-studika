@@ -1,6 +1,7 @@
 class List {
   constructor() {
     this.list = null;
+    this.filtered = [];
     this.added = [];
   }
 
@@ -10,8 +11,16 @@ class List {
   }
 
   filterList(query) {
-    const result = list.filter((title) => title.includes(query));
-    return result;
+    if (query === "") {
+      return this.list;
+    }
+
+    console.log(`query: ${query}`);
+    console.log(this.filtered);
+    this.filtered = this.list.filter((city) =>
+      city.name.includes(query.toLowerCase())
+    );
+    return this.filtered;
   }
 
   addItem(id) {

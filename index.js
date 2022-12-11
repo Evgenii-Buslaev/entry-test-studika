@@ -1,5 +1,5 @@
 import { menuBtn, closeBtn, toggler } from "./scripts/toggleMenu.js";
-import { render } from "./scripts/renderCities.js";
+import { input, clearInput, render } from "./scripts/renderCities.js";
 
 import {
   chooseCityBtn,
@@ -23,6 +23,19 @@ chooseCityMob.addEventListener("click", cityToggler);
 chooseCityBtn.addEventListener("click", () => render());
 chooseCityMob.addEventListener("click", () => render());
 
+input.addEventListener("input", (e) => {
+  render("filter", e.target.value);
+  if (e.target.value !== "") {
+    clearInput.style.visibility = "visible";
+  } else {
+    clearInput.style.visibility = "hidden";
+  }
+});
+clearInput.addEventListener("click", () => {
+  input.value = "";
+  clearInput.style.visibility = "hidden";
+});
+
 choosingContainer.addEventListener("click", (e) => {
   console.log(e.target);
   if (
@@ -42,5 +55,7 @@ addedContainer.addEventListener("click", (e) => {
 });
 
 submitBtn.addEventListener("click", (e) => {
-  if (e.target.classList.value === "button-enabled") console.log("submit");
+  if (e.target.classList.value === "button-enabled") {
+    console.log("submit");
+  }
 });

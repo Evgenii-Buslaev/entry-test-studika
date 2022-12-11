@@ -40,6 +40,7 @@
   height: 15px;
   cursor: pointer;
   filter: invert(50%);
+  visibility: hidden;
 }
 
 .button-disabled {

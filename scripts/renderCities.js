@@ -4,10 +4,17 @@ import { createCityItem } from "./createCityItem.js";
 
 const datalist = document.getElementById("city-datalist");
 const preloader = document.querySelector(".preloader");
+const input = document.getElementById("city-query");
+const clearInput = document.querySelector(".clear-input");
 
 const renderCities = () => {
   let regions = List.list;
-  return async () => {
+  return async (action, query) => {
+    let filtered = [];
+    if (action === "filter") {
+      filtered = List.filterList(query);
+    }
+
     if (!regions) {
       regions = await citiesFetching();
       const cities = regions.map((elem) => elem.cities || []).flat();
@@ -19,11 +26,11 @@ const renderCities = () => {
       datalist.style.display = "flex";
       preloader.style.display = "none";
     } else {
-      return regions;
+      return filtered || regions;
     }
   };
 };
 
 const render = renderCities();
 
-export { render };
+export { input, clearInput, render };
