@@ -26,7 +26,16 @@ const renderCities = () => {
       datalist.style.display = "flex";
       preloader.style.display = "none";
     } else {
-      return filtered || regions;
+      if (filtered.length) {
+        while (datalist.firstChild) {
+          datalist.removeChild(datalist.firstChild);
+        }
+
+        const renderFiltered = filtered.map((elem) => createCityItem(elem));
+        renderFiltered.forEach((elem) => datalist.appendChild(elem));
+        return filtered;
+      }
+      return regions;
     }
   };
 };

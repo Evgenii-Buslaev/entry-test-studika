@@ -5,6 +5,10 @@ class List {
     this.added = [];
   }
 
+  getAdded() {
+    return this.added;
+  }
+
   defineList(list) {
     this.list = list;
     return this.list;
@@ -18,7 +22,7 @@ class List {
     console.log(`query: ${query}`);
     console.log(this.filtered);
     this.filtered = this.list.filter((city) =>
-      city.name.includes(query.toLowerCase())
+      city.name.toLowerCase().includes(query.toLowerCase())
     );
     return this.filtered;
   }
@@ -42,11 +46,6 @@ class List {
     }
 
     console.log(this.added);
-    return this.added;
-  }
-
-  deleteItem(id) {
-    this.added = this.added.filter((elem) => elem.id !== id);
     return this.added;
   }
 }

@@ -1,11 +1,15 @@
-import { menuBtn, closeBtn, toggler } from "./scripts/toggleMenu.js";
+import {
+  menuBtn,
+  closeBtn,
+  toggler,
+} from "./scripts/ui_handlers/toggleMenu.js";
 import { input, clearInput, render } from "./scripts/renderCities.js";
 
 import {
   chooseCityBtn,
   chooseCityMob,
   cityToggler,
-} from "./scripts/toggleCities.js";
+} from "./scripts/ui_handlers/toggleCities.js";
 
 import {
   choosingContainer,
@@ -13,6 +17,8 @@ import {
   submitBtn,
   chooseCity,
 } from "./scripts/chooseCity.js";
+
+import { submitCities } from "./scripts/submitCities.js";
 
 menuBtn.addEventListener("click", toggler);
 closeBtn.addEventListener("click", toggler);
@@ -34,6 +40,8 @@ input.addEventListener("input", (e) => {
 clearInput.addEventListener("click", () => {
   input.value = "";
   clearInput.style.visibility = "hidden";
+
+  render("filter", "");
 });
 
 choosingContainer.addEventListener("click", (e) => {
@@ -56,6 +64,7 @@ addedContainer.addEventListener("click", (e) => {
 
 submitBtn.addEventListener("click", (e) => {
   if (e.target.classList.value === "button-enabled") {
-    console.log("submit");
+    submitCities();
+    cityToggler();
   }
 });
