@@ -1,5 +1,4 @@
 import { menuBtn, closeBtn, toggler } from "./scripts/toggleMenu.js";
-import { citiesFetching } from "./scripts/fetchCities.js";
 import { render } from "./scripts/renderCities.js";
 
 import {
@@ -11,6 +10,7 @@ import {
 import {
   choosingContainer,
   addedContainer,
+  submitBtn,
   chooseCity,
 } from "./scripts/chooseCity.js";
 
@@ -41,4 +41,6 @@ addedContainer.addEventListener("click", (e) => {
   }
 });
 
-const cities = citiesFetching();
+submitBtn.addEventListener("click", (e) => {
+  if (e.target.classList.value === "button-enabled") console.log("submit");
+});

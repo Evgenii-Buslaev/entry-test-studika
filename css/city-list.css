@@ -31,7 +31,7 @@
 .city-list input {
   width: 75%;
   font-size: 14px;
-  color: #a7a7a7;
+  color: #222222;
 }
 
 .clear-input {
@@ -41,12 +41,19 @@
   cursor: pointer;
   filter: invert(50%);
 }
-/* .city-list button:hover {
-  background-color: #0656b4;
-  opacity: 0.9;
-  color: #ffffff;
+
+.button-disabled {
+  color: #a7a7a7;
 }
- */
+
+.button-enabled {
+  color: #ffffff;
+  background: #0656b4;
+}
+
+.button-enabled:hover {
+  opacity: 0.9;
+}
 
 #added-cities {
   text-align: center;
